@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Apotek Sahabat Jaya</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="">
+            <h2>Apotek Sahabat Jaya</h2>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <div class="overlay-menu" id="overlayMenu">
+                <ul>
+                    <li><a href="#hero">Blog</a></li>
+                    <li><a href="#New-hot">New-hot</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <!-- hot News -->
+    <main class="content">
+        <section class="hero" id="hero">
+            <h1>Selamat Datang di Apotek Sahabat Jaya</h1>
+            <p>Kami menyediakan informasi kesehatan terbaru dan produk obat-obatan berkualitas.</p>
+            <button class="cta-btn">Jelajahi Blog</button>
+        </section>
+        <main class="New-hot" id="New-hot">
+            <span>Hot News!🔥</span>
+            <div class="produk">
+                <p>Hot News!🔥</p>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <img src="pure-baby.png" alt="Product">
+            </div>
+            <div class="fungsi-kiri">
+                <div>
+                    <P>Manfaat 1</P>
+                    <span>Mengatasi ruam dan iritasi kulit bayi, seperti ruam popok, biang keringat, dan ruam
+                        susu</span>
+                </div>
+                <div>
+                    <p>Manfaat 2</p>
+                    <span>Melindungi kulit bayi dari kemerahan</span>
+                </div>
+                <div>
+                    <p>Manfaat 3</p>
+                    <span>Menjaga kelembapan kulit bayi agar tetap lembut dan halus</span>
+                </div>
+            </div>
+            <div class="fungsi-kanan">
+                <div>
+                    <p>Manfaat 4</p>
+                    <span>Membantu memperbaiki kulit yang rusak akibat iritasi ringan</span>
+                </div>
+                <div>
+                    <p>Manfaat 5</p>
+                    <span>Merawat kulit sensitif bayi</span>
+                </div>
+                <div>
+                    <p>Manfaat 6</p>
+                    <span>Memberikan kelembutan dan keharuman ekstra bagi bayi </span>
+                </div>
+            </div>
+        </main>
+
+        <main class="preview-container">
+            <div class="product-showcase">
+                <!-- Floating Elements -->
+                <div class="floating-elements">
+                    <div class="floating-orb orb-1"></div>
+                    <div class="floating-orb orb-2"></div>
+                    <div class="floating-orb orb-3"></div>
+                </div>
+
+                <!-- Main Image Section -->
+                <div class="main-image-container">
+                    <!-- <div class="zoom-container">
+                        <div class="allpanah">
+                            <span class="right"></span>
+                            <span class="left"></span>
+                            <span class="panah-left"></span>
+                            <span class="panah-right"></span>
+                            <span class="panah-kiri"></span>
+                            <span class="panah-kanan"></span>
+                        </div>
+                        <div class="pure"> 
+                            <p class="purekanan">Pure</p>
+                            <p class="purekiri">Baby</p>
+                        </div>                                    -->
+                    <img id="mainImage" src="pure-baby-lotion.png" alt="Product Preview">
+                    <div class="image-overlay"></div>
+                </div>
+
+                <!-- 3D Container -->
+                <div class="three-d-container"></div>
+
+                <!-- Magnifier Lens -->
+                <div class="magnifier-lens" id="magnifierLens"></div>
+            </div>
+
+            <!-- Thumbnails Section -->
+            <div class="thumbnails-container">
+                <div class="thumbnails-wrapper">
+                    <button class="thumbnail-btn active" data-img="pure-baby-lotion.png">
+                        <img src="pure-baby-lotion.png" alt="Pure Baby Lotion">
+                        <div class="thumbnail-overlay"></div>
+                    </button>
+                    <button class="thumbnail-btn" data-img="pure-baby.png">
+                        <img src="pure-baby.png" alt="Pure Baby">
+                        <div class="thumbnail-overlay"></div>
+                    </button>
+                    <button class="thumbnail-btn" data-img="beby.webp">
+                        <img src="beby.webp" alt="Pure Baby">
+                        <div class="thumbnail-overlay"></div>
+                    </button>
+                    <button class="thumbnail-btn" data-img="oil.webp">
+                        <img src="oil.webp" alt="Pure Baby">
+                        <div class="thumbnail-overlay"></div>
+                    </button>
+                    <button class="thumbnail-btn" data-img="wash.webp">
+                        <img src="wash.webp" alt="Pure Baby">
+                        <div class="thumbnail-overlay"></div>
+                    </button>
+
+                </div>
+            </div>
+            </div>
+        </main>
+        <!-- end hot news -->
+        <section class="blog-section">
+            <h2>Artikel Terbaru</h2>
+            <div class="blog-cards">
+                <article class="card">
+                    <img src="ener.png" alt="Artikel 1">
+                    <h3>Manfaat Vitamin C</h3>
+                    <p>Vitamin C memiliki banyak manfaat untuk kesehatan tubuh, termasuk meningkatkan daya tahan tubuh.
+                    </p>
+                    <a href="https://www.alodokter.com/enervon-c" class="read-more">Baca Selengkapnya</a>
+                </article>
+                <article class="card">
+                    <img src="paramek.png" alt="Artikel 2">
+                    <h3>Obat Paramex untuk Sakit Kepala</h3>
+                    <p>Pelajari lebih lanjut tentang pengobatan alami untuk sakit kepala yang bisa Anda coba di rumah.
+                    </p>
+                    <a href="https://www.alodokter.com/paramex" class="read-more">Baca Selengkapnya</a>
+                </article>
+                <article class="card">
+                    <img src="cdr.jpeg" alt="Artikel 2">
+                    <h3>CDR </h3>
+                    <p>Tablet pertumbuhan serta pemeliharaan tulang dan gigi
+                    </p>
+                    <a href="https://www.alodokter.com/calcium-d-redoxon-cdr" class="read-more">Baca Selengkapnya</a>
+                </article>
+                <article class="card">
+                    <div class="gambar">
+                        <img src="stress.jpeg" alt="Artikel 3">
+                    </div>
+                    <h3>Cara Mengelola Stres</h3>
+                    <p>Stres dapat berdampak buruk pada kesehatan. Temukan tips untuk mengelola stres secara efektif.
+                    </p>
+                    <a href="https://www.alodokter.com/ini-dia-obat-stres-yang-patut-anda-coba" class="read-more">Baca
+                        Selengkapnya</a>
+                </article>
+                <article class="card">
+                    <div class="gambar">
+                        <img src="polident.jpeg" alt="Artikel 3">
+                    </div>
+                    <h3>Polident</h3>
+                    <p>formula untuk membantu mempertahankan kinerja gigi.
+                    </p>
+                    <a href="https://www.haleonhealthpartner.com/id-id/oral-health/brands/polident/overview/"
+                        class="read-more">Baca Selengkapnya</a>
+                </article>
+                <article class="card">
+                    <div class="gambar">
+                        <img src="mylanta.jpeg" alt="Artikel 3">
+                    </div>
+                    <h3>Mylanta</h3>
+                    <p> mengurangi gejala-gejala yang berhubungan dengan kelebihan, gastritis, tukak lambung, tukak usus
+                        12 jari dengan gejala seperti mual, nyeri lambung dan nyeri ulu hati.
+                    </p>
+                    <a href="https://www.alodokter.com/mylanta" class="read-more">Baca Selengkapnya</a>
+                </article>
+            </div>
+        </section>
+
+        <div class="overlay-wa" id="overlay-wa">
+            <div class="box-no-wa">
+                <div class="header">
+                    <img src="wa.png" alt="WhatsApp Logo" class="wa-logo">
+                    <h2>Hubungi Kami Sekarang</h2>
+                </div>
+
+                <div class="profile-list">
+                    <a href="https://wa.me/+628126770394">
+                        <div class="profile">
+                            <img src="wa.png" alt="Shellya Kusuma">
+                            <div class="Box-profile-wa">
+                                <p>Andri yanto</p>
+                                <span></span>
+                                <span class="status">I will be back soon</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/+6285271141940" text="asslamualaikum bu">
+                        <div class="profile">
+                            <img src="wa.png" alt="Shellya Kusuma">
+                            <div class="Box-profile-wa">
+                                <p>Temisia Erita</p>
+                                <span></span>
+                                <span class="status">I will be back soon</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="profile">
+                            <img src="wa.png" alt="Shellya Kusuma">
+                            <div class="Box-profile-wa">
+                                <p>Oky Syahdian</p>
+                                <span>Apoteker</span>
+                                <span class="status">I will be back soon</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/+6289654986223">
+                        <div class="profile">
+                            <img src="wa.png" alt="Shellya Kusuma">
+                            <div class="Box-profile-wa">
+                                <p>Reyhan Syaputra</p>
+                                <span>Developer</span>
+                                <span class="status">website By Reyhan Syaputra</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="open-button" id="toggle-button">
+            <img src="wa.png" alt="Open WhatsApp">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Lokasi -->
+            <div class="footer-section footer-map">
+                <div class="footer-title">Lokasi Kami</div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63829.65583897403!2d100.2930783216797!3d-0.8746061999999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4c7980dcf42d1%3A0xeb210db940858c66!2sApotek%20Sahabat%20Jaya!5e0!3m2!1sid!2sid!4v1732635805195!5m2!1sid!2sid"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Sosial Media -->
+            <div class="footer-section" id="footer">
+                <div class="footer-title">Ikuti Kami</div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:info@tokoobatsehat.com" target="_blank" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#toggle-button" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kontak -->
+            <div class="footer-section">
+                <div class="footer-title">Kontak Kami</div>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:info@tokoobatsehat.com">info@tokoobatsehat.com</a></p>
+                    <p>Telepon: +62 812-3456-7890</p>
+                    <p>Jam Operasional: 08:00 - 20:00 WIB</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 Toko Obat Sehat. All Rights Reserved.
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById("hamburger");
+            const menu = document.querySelector(".menu ul");
+
+            hamburger.addEventListener("click", () => {
+                menu.classList.toggle("show");
+            });
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.getElementById("hamburger");
+            const overlayMenu = document.getElementById("overlayMenu");
+
+            hamburger.addEventListener("click", () => {
+                overlayMenu.classList.toggle("active");
+            });
+
+            // Tambahkan klik di luar untuk menutup menu (opsional)
+            document.addEventListener("click", (e) => {
+                if (!overlayMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                    overlayMenu.classList.remove("active");
+                }
+            });
+        });
+        // untuk wa
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButton = document.getElementById("toggle-button");
+            const overlayWA = document.getElementById("overlay-wa");
+
+            toggleButton.addEventListener("click", () => {
+                // Toggle visibility
+                if (overlayWA.style.display === "none" || !overlayWA.style.display) {
+                    overlayWA.style.display = "block"; // Show
+                } else {
+                    overlayWA.style.display = "none"; // Hide
+                }
+            });
+        });
+
+        // menu produk 
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainImage = document.getElementById('mainImage');
+            const zoomContainer = document.querySelector('.zoom-container');
+            const threeDContainer = document.querySelector('.three-d-container');
+            const magnifierLens = document.getElementById('magnifierLens');
+            const thumbnailBtns = document.querySelectorAll('.thumbnail-btn');
+
+            // Zoom and 3D Effect Variables
+            let isZoomed = false;
+            const maxRotation = 10; // Maximum rotation in degrees
+            const maxZoom = 1.5; // Maximum zoom level
+
+            // Thumbnail Click Handler
+            thumbnailBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active class from all thumbnails
+                    thumbnailBtns.forEach(tb => tb.classList.remove('active'));
+
+                    // Add active class to clicked thumbnail
+                    this.classList.add('active');
+
+                    // Update main image with fade effect
+                    mainImage.style.opacity = '0';
+                    setTimeout(() => {
+                        mainImage.src = this.dataset.img;
+                        mainImage.style.opacity = '1';
+                    }, 300);
+                });
+            });
+
+            // Mouse Enter Handler
+            zoomContainer.addEventListener('mouseenter', () => {
+                isZoomed = true;
+                magnifierLens.style.opacity = '1';
+                zoomContainer.style.transform = 'scale(1.05)';
+            });
+
+            // Mouse Leave Handler
+            zoomContainer.addEventListener('mouseleave', () => {
+                isZoomed = false;
+                magnifierLens.style.opacity = '0';
+                zoomContainer.style.transform = 'scale(1)';
+                mainImage.style.transform = 'scale(1)';
+                threeDContainer.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            });
+
+            // Mouse Move Handler
+            zoomContainer.addEventListener('mousemove', (e) => {
+                if (!isZoomed) return;
+
+                const bounds = zoomContainer.getBoundingClientRect();
+                const x = (e.clientX - bounds.left) / bounds.width;
+                const y = (e.clientY - bounds.top) / bounds.height;
+
+                // Update magnifier lens position
+                magnifierLens.style.left = `${e.clientX - bounds.left}px`;
+                magnifierLens.style.top = `${e.clientY - bounds.top}px`;
+
+                // Calculate zoom transform
+                const zoomX = ((x - 0.5) * 2) * 50; // 50px max movement
+                const zoomY = ((y - 0.5) * 2) * 50;
+                mainImage.style.transform = `scale(${maxZoom}) translate(${-zoomX}px, ${-zoomY}px)`;
+
+                // Calculate 3D rotation
+                const rotateX = (y - 0.5) * -maxRotation;
+                const rotateY = (x - 0.5) * maxRotation;
+                threeDContainer.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            // Add Floating Animation to Orbs
+            const orbs = document.querySelectorAll('.floating-orb');
+            orbs.forEach((orb, index) => {
+                orb.style.animationDelay = `${-index * 5}s`;
+            });
+
+            // Optional: Add smooth scroll to top when switching images
+            thumbnailBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    zoomContainer.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Initialize first thumbnail as active
+            thumbnailBtns[0].classList.add('active');
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
