@@ -187,7 +187,7 @@ footer {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--text-color);
     padding: 40px 20px;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .footer-container {
@@ -201,7 +201,7 @@ footer {
 .footer-section {
     text-align: center;
     padding: 15px;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -233,7 +233,7 @@ footer {
 .footer-map iframe {
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .social-links {
@@ -271,13 +271,13 @@ footer {
 }
 
 
-    
+
 
 
 .copyright {
     text-align: center;
     padding: 15px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     color: var(--text-color);
     font-size: 0.8rem;
     margin-top: 20px;
@@ -335,7 +335,7 @@ footer {
 }
 
 .overlay-wa img {
-    height: 70px;
+    height: 50px;
 }
 
 .open-button img {
@@ -375,9 +375,23 @@ footer {
     display: none;
     z-index: 1000;
     overflow: hidden;
+    /* Scroll tetap aktif */
     animation: slideUp 1s ease-in-out;
-
 }
+
+/* Hilangkan scrollbar di semua browser */
+.overlay-wa::-webkit-scrollbar {
+    display: none;
+    /* Untuk Chrome, Safari, dan Edge */
+}
+
+.overlay-wa {
+    -ms-overflow-style: none;
+    /* Hilangkan scrollbar di Internet Explorer dan Edge */
+    scrollbar-width: none;
+    /* Hilangkan scrollbar di Firefox */
+}
+
 
 @keyframes slideUp {
     from {
@@ -421,15 +435,29 @@ footer {
     gap: 20px;
 }
 
+.profile-list::-webkit-scrollbar {
+    display: none;
+    /* Untuk Chrome, Safari, dan Edge */
+}
+
+.profile-list {
+    -ms-overflow-style: none;
+    /* Hilangkan scrollbar di Internet Explorer dan Edge */
+    scrollbar-width: none;
+    /* Hilangkan scrollbar di Firefox */
+}
+
 .profile-list {
     padding: 5px;
     height: 280px;
+    overflow-y: scroll;
 }
 
 
 .profile:hover {
     transform: translatey(-5px);
 }
+
 
 .profile {
 
@@ -562,9 +590,10 @@ footer {
 
 /* manfaat */
 /* Main container */
-.New-hot span{
+.New-hot span {
     display: none;
 }
+
 .New-hot {
     position: relative;
     width: 100%;
@@ -870,13 +899,13 @@ footer {
 
 .product-showcase {
     position: relative;
-    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,249,255,0.95));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 249, 255, 0.95));
     border-radius: 30px;
     padding: 40px;
-    box-shadow: 
-        0 20px 60px rgba(0,0,0,0.1),
-        0 10px 30px rgba(0,123,255,0.1),
-        inset 0 -2px 6px rgba(255,255,255,0.7);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.1),
+        0 10px 30px rgba(0, 123, 255, 0.1),
+        inset 0 -2px 6px rgba(255, 255, 255, 0.7);
     overflow: hidden;
     backdrop-filter: blur(10px);
 }
@@ -936,36 +965,40 @@ footer {
 
 
 
-.pure{
+.pure {
     position: relative;
     top: 130px;
     left: 50px;
 }
-.pure p{
+
+.pure p {
     background-color: rgba(0, 55, 255, 0.25);
     box-shadow: 2px 2px 5px rgba(0, 30, 255, 0.557);
     width: fit-content;
     font-size: 18px;
-    font-weight:bold;
+    font-weight: bold;
     border-radius: 10px;
     padding: 10px 15px;
-    
+
 }
+
 .pure .purekiri {
     position: relative;
     margin-left: 72%;
 }
-.left::after{
+
+.left::after {
     content: '';
     position: absolute;
     width: 45px;
     height: 3px;
     background: rgba(0, 0, 255, 0.2);
-    top:38.5%;
+    top: 38.5%;
     left: 28%;
     transform: rotate(28deg);
 }
-.panah-left::after{
+
+.panah-left::after {
     content: '';
     position: absolute;
     width: 3px;
@@ -974,7 +1007,8 @@ footer {
     top: 27%;
     left: 28%;
 }
-.panah-kiri::after{
+
+.panah-kiri::after {
     content: '';
     position: absolute;
     width: 50px;
@@ -983,17 +1017,19 @@ footer {
     top: 27%;
     left: 20%;
 }
-.panah-right::after{
+
+.panah-right::after {
     content: '';
     position: absolute;
     width: 70px;
     height: 2px;
     background: rgba(55, 55, 143, 0.2);
-    top:46.2%;
+    top: 46.2%;
     left: 66.3%;
     transform: rotate(-30deg);
-} 
-.panah-kanan::after{
+}
+
+.panah-kanan::after {
     content: '';
     position: absolute;
     width: 60px;
@@ -1014,9 +1050,9 @@ footer {
     overflow: hidden;
     border-radius: 20px;
     background: white;
-    box-shadow: 
-        0 10px 30px rgba(0,0,0,0.1),
-        0 5px 15px rgba(0,123,255,0.1);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        0 5px 15px rgba(0, 123, 255, 0.1);
     transition: transform 0.5s ease-out;
 }
 
@@ -1034,7 +1070,7 @@ footer {
 .image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1048,16 +1084,16 @@ footer {
     position: absolute;
     width: 150px;
     height: 150px;
-    border: 2px solid rgba(0,123,255,0.3);
+    border: 2px solid rgba(0, 123, 255, 0.3);
     border-radius: 50%;
     pointer-events: none;
     opacity: 0;
     transform: translate(-50%, -50%);
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
-    box-shadow: 
-        0 0 20px rgba(0,123,255,0.2),
-        inset 0 0 20px rgba(255,255,255,0.5);
+    box-shadow:
+        0 0 20px rgba(0, 123, 255, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
     transition: opacity 0.3s ease;
 }
 
@@ -1065,7 +1101,7 @@ footer {
 .thumbnails-container {
     margin-top: 30px;
     padding: 20px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }
@@ -1096,6 +1132,7 @@ footer {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    mix-blend-mode: multiply;
 }
 
 .thumbnail-btn:hover {
@@ -1103,15 +1140,15 @@ footer {
 }
 
 .thumbnail-btn.active {
-    box-shadow: 
-        0 0 0 3px rgba(0,123,255,0.5),
-        0 5px 15px rgba(0,123,255,0.2);
+    box-shadow:
+        0 0 0 3px rgba(0, 123, 255, 0.5),
+        0 5px 15px rgba(0, 123, 255, 0.2);
 }
 
 .thumbnail-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(0,123,255,0.2), transparent);
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.2), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1122,15 +1159,20 @@ footer {
 
 /* Animations */
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(20px, -20px);
     }
+
     50% {
         transform: translate(-10px, 20px);
     }
+
     75% {
         transform: translate(-20px, -10px);
     }
@@ -1143,11 +1185,75 @@ footer {
     transition: transform 0.3s ease;
 }
 
-/* Responsive Design */
+/* meta ai */
+/* Gaya untuk Meta AI */
+/* Gaya untuk Meta AI */
+.meta-ai img {
+    height: 40px;
+    border-radius: 40%;
+    cursor: pointer;
+}
 
-/* footer */
+.meta-ai p:hover {
+    transform: rotate(180deg);
+}
 
-   
+.meta-ai {
+    position: fixed;
+    right: 38px;
+    bottom: 100px;
+    transition: right 0.5s ease-in-out; /* Animasi geser */
+}
+
+/* Gaya untuk Chat GPT */
+.gpt {
+    position: fixed;
+    right: -300px; /* Awal posisi di luar layar */
+    bottom: 100px;
+    transition: right 0.5s ease-in-out; /* Animasi gulir */
+}
+
+.gpt img {
+}
+.gpt img {
+    border-radius: 50%;
+    height: 38px;
+}
+
+/* Untuk menyembunyikan elemen secara default */
+.gpt.hidden {
+    display: none;
+}
+
+/* Saat elemen ditampilkan */
+.gpt.show:hover {
+    transform: scale(1.1);
+}
+.gpt.show {
+    display: block;
+    right: 20px; /* Posisi elemen terlihat */
+    transition: 0.3s;
+}
+
+/* Animasi geser untuk Meta AI saat Chat GPT muncul */
+.meta-ai.move-left {
+    right: 70px; /* Geser Meta AI ke kiri */
+    /* transition: 0.3s; */
+}
+.meta-ai.move-left p {
+    right: 82px; /* Geser Meta AI ke kiri */
+}
+
+/* Disable hyperlink sampai Chat GPT muncul */
+#meta-ai-link, #meta-ai-img-link, #gpt-link {
+    pointer-events: none; /* Nonaktifkan klik */
+}
+
+#meta-ai-link.active, #meta-ai-img-link.active, #gpt-link.active {
+    pointer-events: auto; /* Aktifkan klik setelah animasi */
+}
+
+
 
 
 
@@ -1294,418 +1400,457 @@ footer {
 
 
 /* Extra small devices (max-width: 360px) */
-@media (max-width: 395px) {
-
-    /* Add these media queries at the end of your CSS file */
-    @media (max-width: 360px) {
-
-        /* Hot News Section */
-        .New-hot {
-            padding: 20px 10px;
-            flex-direction: column;
-            min-height: auto;
-        }
-
-        .produk {
-            margin-top: 160px;
-            padding: 0 10px;
-        }
-
-        .produk img {
-            height: 250px;
-            margin-top: 200px;
-        }
-
-        .New-hot span {
-            display: block;
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .produk p {
-            /* margin-top: -200px; */
-            font-size: 24px;
-            display: none;
-        }
-
-        /* Adjust circles size */
-        .produk .circle1 {
-            width: 100px;
-            height: 100px;
-        }
-
-        .produk .circle2 {
-            width: 200px;
-            height: 200px;
-        }
-
-        .produk .circle3 {
-            width: 250px;
-            height: 250px;
-        }
-
-        /* Benefits sections */
-        .fungsi-kiri,
-        .fungsi-kanan {
-            position: static;
-            width: 100%;
-            padding: 0 15px;
-            margin-top: 20px;
-        }
-
-        .fungsi-kiri div,
-        .fungsi-kanan div {
-            margin-bottom: 15px;
-            width: 100%;
-            padding: 12px 15px;
-        }
-
-        /* Remove connecting lines for mobile */
-        .fungsi-kiri div::after,
-        .fungsi-kanan div::before {
-            display: none;
-        }
-
-        /* Adjust text sizes */
-        .fungsi-kiri p,
-        .fungsi-kanan p {
-            font-size: 14px;
-        }
-
-        .fungsi-kiri span,
-        .fungsi-kanan span {
-            font-size: 12px;
-        }
-
-        /* Animation adjustments */
-        .fungsi-kiri div,
-        .fungsi-kanan div {
-            animation: fadeInSlide 0.4s ease forwards;
-        }
-
-        /* Update animation for mobile */
-        @keyframes fadeInSlide {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Adjust layout to be more compact */
-        .fungsi-kiri div:nth-child(1),
-        .fungsi-kanan div:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .fungsi-kiri div:nth-child(2),
-        .fungsi-kanan div:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .fungsi-kiri div:nth-child(3),
-        .fungsi-kanan div:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-    }
-
-    .fungsi-kanan div:nth-child(1) {
-        margin-right: 0px;
-    }
-
-    .fungsi-kiri div:nth-child(1) {
-        margin-left: 0px;
-    }
-
-    .fungsi-kiri div:nth-child(3) {
-        margin-left: 0px;
-    }
-
-    .fungsi-kanan div:nth-child(3) {
-        margin-right: 0px;
-    }
-    
-    .fungsi-kanan {
-        margin-top: -290px;
-    }
-    
-    .fungsi-kiri {
-        position: absolute;
-        left: 10px;
-        top: 60px;
-        width: 340px;
-        margin-top: 50px;
-    }
-    .preview-container {
-        top: 0;
-        padding: 10px;
-    }
-    
-    .product-showcase {
-        padding: 20px;
-    }
-    
-    #mainImage {
-        height: 300px;
-    }
-    
-    .thumbnail-btn {
-        width: 60px;
-        height: 60px;
-    }
 
 
+/* Add these media queries at the end of your CSS file */
+@media (max-width: 360px) {
 
-
-    .pure{
-        position: relative;
-        top: 130px;
-        left: 50px;
-        animation: moveUpDown 2s ease-in-out infinite;
-    }
-    .pure p{
-        background-color: rgba(0, 55, 255, 0.25);
-        box-shadow: 2px 2px 5px rgba(0, 30, 255, 0.557);
-        width: fit-content;
-        font-size: 14px;
-        font-weight:bold;
-        border-radius: 10px;
-        padding: 6px 10px;
-        
-    }
-    .pure .purekiri {
-        position: relative;
-        margin-left: 60%;
-        top: -80px;
-    }
-    .left::after{
-        content: '';
-        position: absolute;
-        width: 45px;
-        height: 3px;
-        background: rgba(0, 0, 255, 0.2);
-        top:38.5%;
-        left: 28%;
-        transform: rotate(28deg);
-    }
-    .panah-kiri::after{
-        
-    }
-    .panah-right::after{
-        content: '';
-        position: absolute;
-        width: 38px;
-        height: 2px;
-        background: rgba(55, 55, 143, 0.2);
-        top:49%;
-        left: 69%;
-        transform: rotate(-30deg);
-    } 
-    .panah-kanan::after{
-        content: '';
-        position: absolute;
-        width: 60px;
-        height: 2px;
-        background: rgba(0, 0, 255, 0.2);
-        top: 39%;
-        left: 74%;
-        transform: rotate(-70deg);
-    }
-    
-    .purekanan{
-        position: relative;
-        top: -90px;
-        right: 33px;
-    }
-    
-    
-    .panah-kiri::after{
-      display: none;
-    }
-    .left::after{
-        content: '';
-        position: absolute;
-        width: 48px;
-        height: 2px;
-        background: rgba(0, 0, 255, 0.2);
-        top:38%;
-        left: 12%;
-        transform: rotate(28deg);
-    }
-    .panah-left::after{
-        content: '';
-        position: absolute;
-        width: 2px;
-        height: 60px;
-        background: rgba(0, 0, 255, 0.2);
-        top: 20%;
-        left: 13%;
-    }
-    .blog-section {
-        padding: 20px;
-        overflow: hidden; /* Mencegah elemen keluar dari batas */
-    }
-    
-    .blog-cards {
-        display: flex; /* Mengatur layout horizontal */
-        text-align: center;
-        gap: 20px; /* Memberikan jarak antar elemen */
-        overflow-x: auto; /* Mengaktifkan scroll horizontal */
-        scroll-snap-type: x mandatory; /* Efek snapping saat scroll */
-        padding-bottom: 10px; /* Tambahkan ruang di bawah untuk scroll */
-    }
-    
-    .blog-cards::-webkit-scrollbar {
-        height: 6px; /* Ukuran scrollbar horizontal */
-    }
-    
-    .blog-cards::-webkit-scrollbar-thumb {
-        background: #bbb; /* Warna scrollbar */
-        border-radius: 4px;
-    }
-    
-    .blog-cards::-webkit-scrollbar-track {
-        background: #f4f4f4;
-    }
-    
-    .card {
-        min-width: 160px; /* Ukuran minimum untuk card */
-        max-width:300px; /* Ukuran maksimum agar seragam */
-        flex: 0 0 auto; /* Mencegah elemen berubah ukuran */
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        scroll-snap-align: center; /* Posisi card saat scroll */
-    }
-    
-    .card:hover {
-        transform: scale(1.05); /* Efek hover */
-    }
-    
-    .card img {
-       
-        height: auto;
-        border-radius: 8px 8px 0 0;
-        object-fit: cover;
-    }
-    
-    .hamburger {
-        display: flex;
+    /* Hot News Section */
+    .New-hot {
+        padding: 20px 10px;
+        flex-direction: column;
+        min-height: auto;
     }
 
-    .menu ul {
+    .produk {
+        margin-top: 160px;
+        padding: 0 10px;
+    }
+
+    .produk img {
+        height: 250px;
+        margin-top: 200px;
+    }
+
+    .New-hot span {
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .produk p {
+        /* margin-top: -200px; */
+        font-size: 24px;
         display: none;
     }
 
-    .menu ul.show {
-        display: flex;
-    }
-    .navbar h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
+    /* Adjust circles size */
+    .produk .circle1 {
+        width: 100px;
+        height: 100px;
     }
 
-    .hero p {
-        font-size: 0.9rem;
+    .produk .circle2 {
+        width: 200px;
+        height: 200px;
     }
 
-    .cta-btn {
-        padding: 6px 14px;
-        font-size: 0.8rem;
+    .produk .circle3 {
+        width: 250px;
+        height: 250px;
     }
 
-    .blog-cards {
-        gap: 15px;
-        /* Kurangi jarak antar kartu */
+    /* Benefits sections */
+    .fungsi-kiri,
+    .fungsi-kanan {
+        position: static;
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 20px;
     }
 
-    .card h3 {
-        font-size: 1rem;
+    .fungsi-kiri div,
+    .fungsi-kanan div {
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 12px 15px;
     }
 
-    .footer {
-        font-size: 0.9rem;
+    /* Remove connecting lines for mobile */
+    .fungsi-kiri div::after,
+    .fungsi-kanan div::before {
+        display: none;
     }
 
-    
-
-    .overlay-menu {
-        position: fixed;
-        text-align: start;
-        top: 0;
-        right: -400px;
-        width: 150px;
-        height: 40%;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease-in-out;
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 20px;
+    /* Adjust text sizes */
+    .fungsi-kiri p,
+    .fungsi-kanan p {
+        font-size: 14px;
     }
 
-    .overlay-menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
+    .fungsi-kiri span,
+    .fungsi-kanan span {
+        font-size: 12px;
     }
 
-    .overlay-menu ul li {
-        margin-bottom: 20px;
+    /* Animation adjustments */
+    .fungsi-kiri div,
+    .fungsi-kanan div {
+        animation: fadeInSlide 0.4s ease forwards;
     }
 
-    .overlay-menu ul li:last-child {
-        margin-bottom: 0;
+    /* Update animation for mobile */
+    @keyframes fadeInSlide {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
-    .overlay-menu ul li a {
-        font-size: 1.5rem;
-        color: #2c7a7b;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
+    /* Adjust layout to be more compact */
+    .fungsi-kiri div:nth-child(1),
+    .fungsi-kanan div:nth-child(1) {
+        animation-delay: 0.1s;
     }
 
-    .overlay-menu ul li a:hover {
-        background-color: #52999c91;
+    .fungsi-kiri div:nth-child(2),
+    .fungsi-kanan div:nth-child(2) {
+        animation-delay: 0.2s;
     }
 
-    /* Overlay menu aktif */
-    .overlay-menu.active {
-        right: 0;
+    .fungsi-kiri div:nth-child(3),
+    .fungsi-kanan div:nth-child(3) {
+        animation-delay: 0.3s;
     }
+}
 
-    /* Untuk memastikan hamburger tetap terlihat */
-    .hamburger {
-        z-index: 1100;
-    }
+.fungsi-kanan div:nth-child(1) {
+    margin-right: 0px;
+}
 
-    .profile {
-        width: 295px;
-    }
+.fungsi-kiri div:nth-child(1) {
+    margin-left: 0px;
+}
 
-    .overlay-wa {
-        right: 20px;
-    }
+.fungsi-kiri div:nth-child(3) {
+    margin-left: 0px;
+}
 
-    .open-button {
-        right: 0px;
-    }
-    .overlay-menu ul li a{
-        font-size: 15px;
-    }
-    
+.fungsi-kanan div:nth-child(3) {
+    margin-right: 0px;
+}
+
+.fungsi-kanan {
+    margin-top: -290px;
+}
+
+.fungsi-kiri {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    width: 340px;
+    margin-top: 50px;
+}
+
+.preview-container {
+    top: 0;
+    padding: 10px;
+}
+
+.product-showcase {
+    padding: 20px;
+}
+
+#mainImage {
+    height: 300px;
+}
+
+.thumbnail-btn {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+.pure {
+    position: relative;
+    top: 130px;
+    left: 50px;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+.pure p {
+    background-color: rgba(0, 55, 255, 0.25);
+    box-shadow: 2px 2px 5px rgba(0, 30, 255, 0.557);
+    width: fit-content;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 6px 10px;
+
+}
+
+.pure .purekiri {
+    position: relative;
+    margin-left: 60%;
+    top: -80px;
+}
+
+.left::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 3px;
+    background: rgba(0, 0, 255, 0.2);
+    top: 38.5%;
+    left: 28%;
+    transform: rotate(28deg);
+}
+
+.panah-kiri::after {}
+
+.panah-right::after {
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 2px;
+    background: rgba(55, 55, 143, 0.2);
+    top: 49%;
+    left: 69%;
+    transform: rotate(-30deg);
+}
+
+.panah-kanan::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: rgba(0, 0, 255, 0.2);
+    top: 39%;
+    left: 74%;
+    transform: rotate(-70deg);
+}
+
+.purekanan {
+    position: relative;
+    top: -90px;
+    right: 33px;
+}
+
+
+.panah-kiri::after {
+    display: none;
+}
+
+.left::after {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 2px;
+    background: rgba(0, 0, 255, 0.2);
+    top: 38%;
+    left: 12%;
+    transform: rotate(28deg);
+}
+
+.panah-left::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: rgba(0, 0, 255, 0.2);
+    top: 20%;
+    left: 13%;
+}
+
+.blog-section {
+    padding: 20px;
+    overflow: hidden;
+    /* Mencegah elemen keluar dari batas */
+}
+
+.blog-cards {
+    display: flex;
+    /* Mengatur layout horizontal */
+    text-align: center;
+    gap: 20px;
+    /* Memberikan jarak antar elemen */
+    overflow-x: auto;
+    /* Mengaktifkan scroll horizontal */
+    scroll-snap-type: x mandatory;
+    /* Efek snapping saat scroll */
+    padding-bottom: 10px;
+    /* Tambahkan ruang di bawah untuk scroll */
+}
+
+.blog-cards::-webkit-scrollbar {
+    height: 6px;
+    /* Ukuran scrollbar horizontal */
+}
+
+.blog-cards::-webkit-scrollbar-thumb {
+    background: #bbb;
+    /* Warna scrollbar */
+    border-radius: 4px;
+}
+
+.blog-cards::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+.card {
+    height: 480px;
+    min-width: 160px;
+    /* Ukuran minimum untuk card */
+    max-width: 300px;
+    /* Ukuran maksimum agar seragam */
+    flex: 0 0 auto;
+    /* Mencegah elemen berubah ukuran */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    scroll-snap-align: center;
+    /* Posisi card saat scroll */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Efek hover */
+}
+
+.card img {
+    margin-top: 20px;
+    width: 100%; /* Menyesuaikan lebar gambar dengan lebar card */
+    height: 200px; /* Tentukan tinggi gambar sesuai kebutuhan */
+    /* object-fit: cover;  */
+    border-radius: 8px 8px 0 0; /* Menjaga sudut gambar tetap melengkung */
+}
+
+.hamburger {
+    display: flex;
+}
+
+.menu ul {
+    display: none;
+}
+
+.menu ul.show {
+    display: flex;
+}
+
+.navbar h2 {
+    font-size: 1.2rem;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+}
+
+.hero p {
+    font-size: 0.9rem;
+}
+
+.cta-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+}
+
+.blog-cards {
+    gap: 15px;
+    /* Kurangi jarak antar kartu */
+}
+
+.card h3 {
+    font-size: 1rem;
+}
+
+.footer {
+    font-size: 0.9rem;
+}
+
+
+
+.overlay-menu {
+    position: fixed;
+    text-align: start;
+    top: 0;
+    right: -400px;
+    width: 150px;
+    height: 40%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.overlay-menu ul li {
+    margin-bottom: 20px;
+}
+
+.overlay-menu ul li:last-child {
+    margin-bottom: 0;
+}
+
+.overlay-menu ul li a {
+    font-size: 1.5rem;
+    color: #2c7a7b;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.overlay-menu ul li a:hover {
+    background-color: #52999c91;
+}
+
+/* Overlay menu aktif */
+.overlay-menu.active {
+    right: 0;
+}
+
+/* Untuk memastikan hamburger tetap terlihat */
+.hamburger {
+    z-index: 1100;
+}
+
+.profile {
+    width: 295px;
+}
+
+.overlay-wa {
+    right: 20px;
+}
+
+.open-button {
+    right: 0px;
+}
+
+.overlay-menu ul li a {
+    font-size: 15px;
+}
+
+.meta-ai p {
+    position: fixed;
+    bottom: 115px;
+    right: 35px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.meta-ai {
+    position: fixed;
+    right: 23px;
+    bottom: 100px;
+    transition: 0.3s;
 }

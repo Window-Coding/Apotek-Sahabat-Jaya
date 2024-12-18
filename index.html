@@ -199,8 +199,37 @@
                     </p>
                     <a href="https://www.alodokter.com/mylanta" class="read-more">Baca Selengkapnya</a>
                 </article>
+                <article class="card">
+                    <div class="gambar">
+                        <img src="sealsune.jpg" alt="Artikel 3">
+                    </div>
+                    <h3>SELSUN BLUE SHAMPO </h3>
+                    <p> Untuk mengobati ketombe tingkat sedang cendrung berat ekaliguds untuk meenghilangkan gatal-gatal
+                        ketombe
+                    </p>
+                    <a href="https://www.halodoc.com/obat-dan-vitamin/selsun-blue-shampo-120-ml?srsltid=AfmBOopvgukJPhFhATakjhED6t0InuL6bHpEEL0nNbPylv31-eI40J3U"
+                        class="read-more">Baca Selengkapnya</a>
+                </article>
             </div>
         </section>
+        <!-- meta ai -->
+        <section>
+            <div class="meta-ai" onclick="toggleOption()">
+                <a href="https://wa.me/13135550002?s=5" id="meta-ai-link">
+                    <p>AI</p>
+                </a>
+                <a href="https://wa.me/13135550002?s=5" id="meta-ai-img-link">
+                    <img src="meta ai.jpg" alt="Meta AI">
+                </a>
+            </div>
+            <div class="gpt hidden">
+                <a href="https://chatgpt.com/" id="gpt-link">
+                    <img src="gpt.png" alt="Chat GPT">
+                </a>
+            </div>
+
+        </section>
+
 
         <div class="overlay-wa" id="overlay-wa">
             <div class="box-no-wa">
@@ -294,9 +323,9 @@
             <div class="footer-section">
                 <div class="footer-title">Kontak Kami</div>
                 <div class="contact-info">
-                    <p>Email: <a href="mailto:info@tokoobatsehat.com">info@tokoobatsehat.com</a></p>
-                    <p>Telepon: +62 812-3456-7890</p>
-                    <p>Jam Operasional: 08:00 - 20:00 WIB</p>
+                    <p>Email: <a href="@sahputrareyhandwi@gmail.com">syahputrareyhandwi@gmail.com</a></p>
+                    <p>Telepon: +6289508839313</p>
+                    <p>Jam Operasional: 08:00 - 22:00 WIB</p>
                 </div>
             </div>
         </div>
@@ -432,6 +461,67 @@
             // Initialize first thumbnail as active
             thumbnailBtns[0].classList.add('active');
         });
+    </script>
+
+
+    <script>
+        function toggleOption() {
+    const gptElement = document.querySelector('.gpt');
+    const metaAIElement = document.querySelector('.meta-ai');
+    const metaAIImgLink = document.getElementById('meta-ai-img-link');
+    const metaAILink = document.getElementById('meta-ai-link');
+    const gptLink = document.getElementById('gpt-link');
+
+    if (gptElement.classList.contains('hidden')) {
+        // Tampilkan Chat GPT dan geser Meta AI
+        gptElement.classList.remove('hidden');
+        gptElement.classList.add('show');
+        metaAIElement.classList.add('move-left');
+        
+        // Mengaktifkan klik setelah animasi
+        setTimeout(function() {
+            metaAIImgLink.classList.add('active');
+            metaAILink.classList.add('active');
+            gptLink.classList.add('active');
+        }, 500); // Sesuaikan dengan waktu durasi animasi
+    } else {
+        // Sembunyikan Chat GPT dan kembalikan Meta AI ke posisi semula
+        gptElement.classList.remove('show');
+        gptElement.classList.add('hidden');
+        metaAIElement.classList.remove('move-left');
+        
+        // Nonaktifkan klik saat animasi
+        metaAIImgLink.classList.remove('active');
+        metaAILink.classList.remove('active');
+        gptLink.classList.remove('active');
+    }
+}
+
+// Menambahkan event listener untuk mendeteksi klik di luar elemen
+document.addEventListener('click', function(event) {
+    const metaAIElement = document.querySelector('.meta-ai');
+    const gptElement = document.querySelector('.gpt');
+    
+    // Memeriksa apakah klik terjadi di luar elemen .meta-ai dan .gpt
+    if (!metaAIElement.contains(event.target) && !gptElement.contains(event.target)) {
+        // Jika klik di luar, kembalikan posisi Meta AI dan sembunyikan Chat GPT
+        if (gptElement.classList.contains('show')) {
+            gptElement.classList.remove('show');
+            gptElement.classList.add('hidden');
+            metaAIElement.classList.remove('move-left');
+            
+            // Nonaktifkan klik saat animasi
+            const metaAIImgLink = document.getElementById('meta-ai-img-link');
+            const metaAILink = document.getElementById('meta-ai-link');
+            const gptLink = document.getElementById('gpt-link');
+            metaAIImgLink.classList.remove('active');
+            metaAILink.classList.remove('active');
+            gptLink.classList.remove('active');
+        }
+    }
+});
+
+
     </script>
     <script>
         AOS.init();
