@@ -93,18 +93,18 @@
                 <!-- Main Image Section -->
                 <div class="main-image-container">
                     <!-- <div class="zoom-container">
-                        <div class="allpanah">
-                            <span class="right"></span>
-                            <span class="left"></span>
-                            <span class="panah-left"></span>
-                            <span class="panah-right"></span>
-                            <span class="panah-kiri"></span>
-                            <span class="panah-kanan"></span>
-                        </div>
-                        <div class="pure"> 
-                            <p class="purekanan">Pure</p>
-                            <p class="purekiri">Baby</p>
-                        </div>                                    -->
+                            <div class="allpanah">
+                                <span class="right"></span>
+                                <span class="left"></span>
+                                <span class="panah-left"></span>
+                                <span class="panah-right"></span>
+                                <span class="panah-kiri"></span>
+                                <span class="panah-kanan"></span>
+                            </div>
+                            <div class="pure"> 
+                                <p class="purekanan">Pure</p>
+                                <p class="purekiri">Baby</p>
+                            </div>                                    -->
                     <img id="mainImage" src="pure-baby-lotion.png" alt="Product Preview">
                     <div class="image-overlay"></div>
                 </div>
@@ -212,8 +212,39 @@
                 </article>
             </div>
         </section>
+        <main class="body" id="qrisPopup">
+            <div class="header-qris">
+                <div class="qr">
+                    <div class="head">
+                        <div class="ex"> 
+                            <p>x</p>
+                        </div>
+                        <p>QRIS <span>Code Qr Apotek Sahabat Jaya <br>Bayar Di Sini </span></p>
+                        <img src="logo pay.png" alt="Logo Pay">
+                    </div>
+
+                    <div class="store-info">
+                        <p>Apotek Sahabat Jaya<br>No Dana : 085271141940</p>
+                    </div>
+
+                    <div class="qr-code-container">
+                        <img src="qr.png" alt="QR Code">
+                    </div>
+
+                    <div class="menu-pembayaran">
+                        <img src="shopepay.png" alt="Payment Method">
+                        <img src="shopepay.png" alt="Payment Method">
+                        <img src="shopepay.png" alt="Payment Method">
+                        <img src="shopepay.png" alt="Payment Method">
+                    </div>
+                </div>
+            </div>
+        </main>
         <!-- meta ai -->
         <section>
+            <div class="bayar">
+                <a href="" id="openQris"><img src="pay.png" alt=""></a>
+            </div>
             <div class="meta-ai" onclick="toggleOption()">
                 <a href="https://wa.me/13135550002?s=5" id="meta-ai-link">
                     <p>AI</p>
@@ -228,6 +259,7 @@
                 </a>
             </div>
 
+            <!-- qris -->
         </section>
 
 
@@ -259,7 +291,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="">
+                    <!-- <a href="">
                         <div class="profile">
                             <img src="wa.png" alt="Shellya Kusuma">
                             <div class="Box-profile-wa">
@@ -268,7 +300,7 @@
                                 <span class="status">I will be back soon</span>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
                     <a href="https://wa.me/+6289508839313">
                         <div class="profile">
                             <img src="wa.png" alt="Shellya Kusuma">
@@ -294,10 +326,9 @@
             <div class="footer-section footer-map">
                 <div class="footer-title">Lokasi Kami</div>
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63829.65583897403!2d100.2930783216797!3d-0.8746061999999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4c7980dcf42d1%3A0xeb210db940858c66!2sApotek%20Sahabat%20Jaya!5e0!3m2!1sid!2sid!4v1732635805195!5m2!1sid!2sid"
-                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.353489936819!2d100.36259581175015!3d-0.874606199113235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4c7980dcf42d1%3A0xeb210db940858c66!2sApotek%20Sahabat%20Jaya!5e0!3m2!1sid!2sid!4v1734544088751!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <!-- Sosial Media -->
@@ -333,6 +364,7 @@
             © 2024 Apotek Ssahabat Jaya. All Rights Reserved.
         </div>
     </footer>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const hamburger = document.getElementById("hamburger");
@@ -520,6 +552,38 @@
                 }
             }
         });
+    </script>
+    <!-- popup -->
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const qrisPopup = document.getElementById("qrisPopup");
+    const closeBtn = document.querySelector(".head .ex");
+
+    // Fungsi untuk menampilkan popup
+    function showPopup() {
+        qrisPopup.classList.remove("hide");
+        qrisPopup.classList.add("show");
+    }
+
+    // Fungsi untuk menyembunyikan popup
+    function hidePopup() {
+        qrisPopup.classList.remove("show");
+        qrisPopup.classList.add("hide");
+
+        // Setelah animasi selesai, sembunyikan elemen
+        setTimeout(() => {
+            qrisPopup.style.display = "none";
+        }, 500); // Sesuai durasi animasi fadeOut
+    }
+
+    // Event listener tombol x
+    closeBtn.addEventListener("click", hidePopup);
+
+    // Tambahkan logika jika ingin popup muncul otomatis
+    setTimeout(showPopup, 1000); // Popup muncul setelah 1 detik
+});
+
+
     </script>
     <script>
         AOS.init();

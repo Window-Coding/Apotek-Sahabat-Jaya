@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRIS Design</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .qris-card {
+            position: relative;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 360px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .qris-card .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+        }
+
+        .qris-card .header img {
+            height: 30px;
+        }
+
+        .qris-card h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .qris-card .merchant-id {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .qris-card .qr-code {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qris-card .qr-code img {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ddd;
+        }
+
+        .qris-card .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(to right, red 20%, green 80%);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="qris-card">
+        <div class="header">
+            <img src="https://via.placeholder.com/80x30?text=QRIS" alt="Logo QRIS">
+            <img src="https://via.placeholder.com/30x30?text=GPN" alt="GPN Logo">
+        </div>
+        <h1>TS66788 RYANS CELL STORE</h1>
+        <div class="merchant-id">MID: 098504441522</div>
+        <div class="qr-code">
+            <img src="https://via.placeholder.com/200?text=QR+CODE" alt="QR Code">
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
