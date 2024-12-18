@@ -466,62 +466,60 @@
 
     <script>
         function toggleOption() {
-    const gptElement = document.querySelector('.gpt');
-    const metaAIElement = document.querySelector('.meta-ai');
-    const metaAIImgLink = document.getElementById('meta-ai-img-link');
-    const metaAILink = document.getElementById('meta-ai-link');
-    const gptLink = document.getElementById('gpt-link');
-
-    if (gptElement.classList.contains('hidden')) {
-        // Tampilkan Chat GPT dan geser Meta AI
-        gptElement.classList.remove('hidden');
-        gptElement.classList.add('show');
-        metaAIElement.classList.add('move-left');
-        
-        // Mengaktifkan klik setelah animasi
-        setTimeout(function() {
-            metaAIImgLink.classList.add('active');
-            metaAILink.classList.add('active');
-            gptLink.classList.add('active');
-        }, 500); // Sesuaikan dengan waktu durasi animasi
-    } else {
-        // Sembunyikan Chat GPT dan kembalikan Meta AI ke posisi semula
-        gptElement.classList.remove('show');
-        gptElement.classList.add('hidden');
-        metaAIElement.classList.remove('move-left');
-        
-        // Nonaktifkan klik saat animasi
-        metaAIImgLink.classList.remove('active');
-        metaAILink.classList.remove('active');
-        gptLink.classList.remove('active');
-    }
-}
-
-// Menambahkan event listener untuk mendeteksi klik di luar elemen
-document.addEventListener('click', function(event) {
-    const metaAIElement = document.querySelector('.meta-ai');
-    const gptElement = document.querySelector('.gpt');
-    
-    // Memeriksa apakah klik terjadi di luar elemen .meta-ai dan .gpt
-    if (!metaAIElement.contains(event.target) && !gptElement.contains(event.target)) {
-        // Jika klik di luar, kembalikan posisi Meta AI dan sembunyikan Chat GPT
-        if (gptElement.classList.contains('show')) {
-            gptElement.classList.remove('show');
-            gptElement.classList.add('hidden');
-            metaAIElement.classList.remove('move-left');
-            
-            // Nonaktifkan klik saat animasi
+            const gptElement = document.querySelector('.gpt');
+            const metaAIElement = document.querySelector('.meta-ai');
             const metaAIImgLink = document.getElementById('meta-ai-img-link');
             const metaAILink = document.getElementById('meta-ai-link');
             const gptLink = document.getElementById('gpt-link');
-            metaAIImgLink.classList.remove('active');
-            metaAILink.classList.remove('active');
-            gptLink.classList.remove('active');
+
+            if (gptElement.classList.contains('hidden')) {
+                // Tampilkan Chat GPT dan geser Meta AI
+                gptElement.classList.remove('hidden');
+                gptElement.classList.add('show');
+                metaAIElement.classList.add('move-left');
+
+                // Mengaktifkan klik setelah animasi
+                setTimeout(function () {
+                    metaAIImgLink.classList.add('active');
+                    metaAILink.classList.add('active');
+                    gptLink.classList.add('active');
+                }, 500); // Sesuaikan dengan waktu durasi animasi
+            } else {
+                // Sembunyikan Chat GPT dan kembalikan Meta AI ke posisi semula
+                gptElement.classList.remove('show');
+                gptElement.classList.add('hidden');
+                metaAIElement.classList.remove('move-left');
+
+                // Nonaktifkan klik saat animasi
+                metaAIImgLink.classList.remove('active');
+                metaAILink.classList.remove('active');
+                gptLink.classList.remove('active');
+            }
         }
-    }
-});
 
+        // Menambahkan event listener untuk mendeteksi klik di luar elemen
+        document.addEventListener('click', function (event) {
+            const metaAIElement = document.querySelector('.meta-ai');
+            const gptElement = document.querySelector('.gpt');
 
+            // Memeriksa apakah klik terjadi di luar elemen .meta-ai dan .gpt
+            if (!metaAIElement.contains(event.target) && !gptElement.contains(event.target)) {
+                // Jika klik di luar, kembalikan posisi Meta AI dan sembunyikan Chat GPT
+                if (gptElement.classList.contains('show')) {
+                    gptElement.classList.remove('show');
+                    gptElement.classList.add('hidden');
+                    metaAIElement.classList.remove('move-left');
+
+                    // Nonaktifkan klik saat animasi
+                    const metaAIImgLink = document.getElementById('meta-ai-img-link');
+                    const metaAILink = document.getElementById('meta-ai-link');
+                    const gptLink = document.getElementById('gpt-link');
+                    metaAIImgLink.classList.remove('active');
+                    metaAILink.classList.remove('active');
+                    gptLink.classList.remove('active');
+                }
+            }
+        });
     </script>
     <script>
         AOS.init();
