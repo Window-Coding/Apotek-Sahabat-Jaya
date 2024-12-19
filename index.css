@@ -1197,7 +1197,11 @@ footer {
 .meta-ai p:hover {
     transform: rotate(180deg);
 }
-
+.meta-ai p {
+    position: fixed;
+   margin-left: 12px;
+   margin-top:8px;
+}
 .meta-ai {
     position: fixed;
     right: 38px;
@@ -1267,15 +1271,19 @@ footer {
     /* Aktifkan klik setelah animasi */
 }
 
+.bayar img:hover {
+    scale: 1.1;
+}
 .bayar img {
     height: 39px;
-    border-radius: 50%;
+    border-radius: 40%;
+    transition: 0.3s;
 }
 
 .bayar {
     position: fixed;
     bottom: 160px;
-    right: 30px;
+    right: 26px;
 
 }
 /* .body{
@@ -1308,6 +1316,7 @@ footer {
     position: absolute;
     right: 15px;
     top: 10px;
+    cursor: pointer;
  }
 .body {
     /* display: none;  */
@@ -3129,7 +3138,6 @@ footer {
         position: absolute;
         left: 10px;
         top: 60px;
-        width: 340px;
         margin-top: 50px;
     }
 

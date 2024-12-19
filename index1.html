@@ -216,7 +216,7 @@
             <div class="header-qris">
                 <div class="qr">
                     <div class="head">
-                        <div class="ex"> 
+                        <div class="ex">
                             <p>x</p>
                         </div>
                         <p>QRIS <span>Code Qr Apotek Sahabat Jaya <br>Bayar Di Sini </span></p>
@@ -558,29 +558,35 @@
 document.addEventListener("DOMContentLoaded", function () {
     const qrisPopup = document.getElementById("qrisPopup");
     const closeBtn = document.querySelector(".head .ex");
+    const openQrisBtn = document.getElementById("openQris"); // Get the payment image link
 
-    // Fungsi untuk menampilkan popup
-    function showPopup() {
+    // Function to show popup
+    function showPopup(e) {
+        e.preventDefault(); // Prevent default link behavior
+        qrisPopup.style.display = "flex"; // Make sure popup is displayed
         qrisPopup.classList.remove("hide");
         qrisPopup.classList.add("show");
     }
 
-    // Fungsi untuk menyembunyikan popup
+    // Function to hide popup
     function hidePopup() {
         qrisPopup.classList.remove("show");
         qrisPopup.classList.add("hide");
 
-        // Setelah animasi selesai, sembunyikan elemen
+        // Hide element after animation completes
         setTimeout(() => {
             qrisPopup.style.display = "none";
-        }, 500); // Sesuai durasi animasi fadeOut
+        }, 500);
     }
 
-    // Event listener tombol x
+    // Add click event listener to payment image
+    openQrisBtn.addEventListener("click", showPopup);
+
+    // Add click event listener to close button
     closeBtn.addEventListener("click", hidePopup);
 
-    // Tambahkan logika jika ingin popup muncul otomatis
-    setTimeout(showPopup, 1000); // Popup muncul setelah 1 detik
+    // Initialize popup to be hidden
+    qrisPopup.style.display = "none";
 });
 
 
